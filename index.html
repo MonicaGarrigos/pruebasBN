@@ -22,20 +22,28 @@
         let usr1=miJuego.obtenerUsuario("pepe");
         let usr2=miJuego.obtenerUsuario("luis");
         let partida=miJuego.obtenerPartida(res.codigo);
-
-		usr1.colocarBarco("b2",0,0); // 0,0,1,0
-		usr1.colocarBarco("b4",0,1); // 0,1,1,1,2,1,3,1
+/*
+		usr1.colocarBarco("b1",0,0); // 0,0,1,0
+		usr1.colocarBarco("b2",0,1); // 0,1,1,1,2,1,3,1
 		usr1.barcosDesplegados();
 
-		usr2.colocarBarco("b2",0,0); 
-		usr2.colocarBarco("b4",0,1);
+		usr2.colocarBarco("b1",0,0); 
+		usr2.colocarBarco("b2",0,1);
 		usr2.barcosDesplegados();
-
-		usr2.disparar(0,0); //no es tu turno
-
-		usr1.disparar(3,0); //agua
-		usr1.disparar(1,0); //no es tu turno
+*/
 		
+		usr1.colocarBarco("b1", 0, 0); // 0,0 1,0
+            usr1.colocarBarco("b2", 0, 1); // 0,1 1,1 2,1 3,1
+            usr1.barcosDesplegados();
+            usr2.colocarBarco("b1", 3, 3);// 3,3 4,3
+            usr2.colocarBarco("b2", 4, 4);// 4,4 5,4 6,4 7,4
+            usr2.barcosDesplegados();
+		
+		//usr2.disparar(0,0); //no es tu turno
+
+		//usr1.disparar(0,0); //agua
+		//usr1.disparar(0,1); //no es tu turno
+		//usr1.disparar(1,1);		
 /*
 		//Que hunda todos los barcos:
 		usr1.disparar(0,0);
